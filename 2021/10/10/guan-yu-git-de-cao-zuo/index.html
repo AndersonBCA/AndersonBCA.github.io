@@ -539,12 +539,25 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/git/">
+                                <span class="chip bg-color">git</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E5%85%B3%E4%BA%8Egit%E7%9A%84%E6%93%8D%E4%BD%9C/" class="post-category">
+                                关于git的操作
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -562,14 +575,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    5
+                    1.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    4 分
                 </div>
                 
 
@@ -592,7 +605,163 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Git-日常使用"><a href="#Git-日常使用" class="headerlink" title="Git 日常使用"></a>Git 日常使用</h1>
+                <h1 id="Git-日常使用"><a href="#Git-日常使用" class="headerlink" title="Git 日常使用"></a>Git 日常使用</h1><h2 id="拉去远程仓库制指定分支到本地"><a href="#拉去远程仓库制指定分支到本地" class="headerlink" title="拉去远程仓库制指定分支到本地"></a>拉去远程仓库制指定分支到本地</h2><pre class="line-numbers language-git" data-language="git"><code class="language-git">git clone -b 远程分支名  仓库地址<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="Git-忽略文件"><a href="#Git-忽略文件" class="headerlink" title="Git 忽略文件"></a>Git 忽略文件</h2><ul>
+<li>在仓库的根目录下创建一个 .gitignore 文件</li>
+<li>将不需要被 git 管理的文件路径 写到 gitignore 文件中</li>
+<li><code>idea.txt</code> 忽视 idea.txt 文件</li>
+<li><code>.gitignore</code> 忽视.gitignore 文件</li>
+<li><code>css/index.js</code> 忽视 css 下的 index.js</li>
+<li><code>css/*.js</code> 忽视 css 下的所有 js 文件</li>
+<li><code>css</code> 忽视 css 文件夹</li>
+</ul>
+<h2 id="Git-基础操作"><a href="#Git-基础操作" class="headerlink" title="Git 基础操作"></a>Git 基础操作</h2><h3 id="工作区，暂存区，与仓库区"><a href="#工作区，暂存区，与仓库区" class="headerlink" title="工作区，暂存区，与仓库区"></a>工作区，暂存区，与仓库区</h3><ul>
+<li>工作区：书写代码的区域</li>
+<li>暂存区：暂时存储的区域，git 无法直接从工作区提交到仓库区，需要 先从工作区添加到暂存区，然后才能提交到仓库区。可以避免一些错误操作</li>
+<li>仓库区：将保存在暂存区的内容保存到 Git 仓库中，生成版本号，可以根据版本号回退到指定版本的代码</li>
+</ul>
+<h3 id="Git-配置"><a href="#Git-配置" class="headerlink" title="Git 配置"></a>Git 配置</h3><pre class="line-numbers language-git" data-language="git"><code class="language-git">//设置用户名
+
+git  config --global user.name  用户名
+
+//设置邮箱
+
+ git config --global user.email  邮箱
+
+//查看配置信息
+
+git config --list
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="Git-初始化"><a href="#Git-初始化" class="headerlink" title="Git 初始化"></a>Git 初始化</h3><pre class="line-numbers language-git" data-language="git"><code class="language-git">git init<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="将文件添加到暂存区"><a href="#将文件添加到暂存区" class="headerlink" title="将文件添加到暂存区"></a>将文件添加到暂存区</h3><pre class="line-numbers language-git" data-language="git"><code class="language-git">//将选择文件添加到暂存区/文件夹/所有的js文件
+
+git add  文件名称/文件夹名称/*.js
+
+//添加当前目录下的所有文件
+
+git add ./-A/--all
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="暂存区提交到仓库"><a href="#暂存区提交到仓库" class="headerlink" title="暂存区提交到仓库"></a>暂存区提交到仓库</h3><pre class="line-numbers language-git" data-language="git"><code class="language-git">//将文件从暂存区提交到仓库
+
+git commit -m 添加说明
+
+// 修改上一次提交说明
+
+git commit --amend -m 提交说明<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="查看-Log-和-reflog"><a href="#查看-Log-和-reflog" class="headerlink" title="查看 Log 和 reflog"></a>查看 Log 和 reflog</h3><pre class="line-numbers language-git" data-language="git"><code class="language-git">//查看提交的日志
+git log
+
+
+//查看所有的版本信息，回退之后也可以查看
+git reflog<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="Diff-版本比较相关"><a href="#Diff-版本比较相关" class="headerlink" title="Diff 版本比较相关"></a>Diff 版本比较相关</h3><pre class="line-numbers language-git" data-language="git"><code class="language-git">
+//查看工作区与暂存区的不同
+git diff
+
+//查看工作区域仓库区的不同
+git diff --cached
+
+//查看工作区域仓库区的不同，最新提交比较
+git diff HEAD
+
+//比较两次版本的不同
+
+git diff  版本号  版本号
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="reset-回退相关"><a href="#reset-回退相关" class="headerlink" title="reset 回退相关"></a>reset 回退相关</h3><pre class="line-numbers language-git" data-language="git"><code class="language-git">//回退到指定版本号
+git reset --hard 版本号
+
+
+//回退到上一次提交/上上次提交/本次提交
+git reset --hard head~1/head~2/head~0
+
+// --hard 其他参数
+// --soft 只重置仓库区
+// --mixed 重置仓库区和暂存区
+// --hard 重置仓库区暂存区和工作区
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="Branch-分支相关"><a href="#Branch-分支相关" class="headerlink" title="Branch 分支相关"></a>Branch 分支相关</h2><p>:::tip 注意<br>在 git 中，有一个特殊分支 HEAD 永远指向当前分支<br>:::</p>
+<h3 id="创建切换分支"><a href="#创建切换分支" class="headerlink" title="创建切换分支"></a>创建切换分支</h3><pre class="line-numbers language-git" data-language="git"><code class="language-git">//查看分支
+git branch
+
+//创建分支
+git branch 分支名称
+
+//切换分支
+git checkout 分支名称
+
+//创建新分支并切换到该分支
+git chekcout -b 分支名称
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="删除合并分支"><a href="#删除合并分支" class="headerlink" title="删除合并分支"></a>删除合并分支</h3><pre class="line-numbers language-git" data-language="git"><code class="language-git">//删除分支
+git branch -d 分支名称
+
+//合并分支  将其他分支的内容合并到当前分支
+git merge 分支名称
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>:::tip 注意<br>不能在当前分支删除当前分支，需要切换到其他分支才能删除<br>:::</p>
+<h2 id="Git-远程仓库"><a href="#Git-远程仓库" class="headerlink" title="Git 远程仓库"></a>Git 远程仓库</h2><ul>
+<li>Github，GitLab 和码云</li>
+</ul>
+<h3 id="克隆代码"><a href="#克隆代码" class="headerlink" title="克隆代码"></a>克隆代码</h3><pre class="line-numbers language-git" data-language="git"><code class="language-git">git clone 远程仓库地址<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="远程仓库操作"><a href="#远程仓库操作" class="headerlink" title="远程仓库操作"></a>远程仓库操作</h3><pre class="line-numbers language-git" data-language="git"><code class="language-git">//拉取远程仓库代码
+ git pull 远程仓库地址 分支名称
+
+//将本地仓库中代码提交到远程仓库
+ git push 远程仓库地址 分支名称<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="仓库别名"><a href="#仓库别名" class="headerlink" title="仓库别名"></a>仓库别名</h3><pre class="line-numbers language-git" data-language="git"><code class="language-git">//给远程仓库起一个别名
+git remote 仓库别名 仓库地址
+
+//删除别名
+git remote remove 仓库别名
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="Tag-相关"><a href="#Tag-相关" class="headerlink" title="Tag 相关"></a>Tag 相关</h2><h3 id="创建-tag"><a href="#创建-tag" class="headerlink" title="创建 tag"></a>创建 tag</h3><pre class="line-numbers language-git" data-language="git"><code class="language-git">git tag tag名称 -m tag备注<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="推送-Tag"><a href="#推送-Tag" class="headerlink" title="推送 Tag"></a>推送 Tag</h3><pre class="line-numbers language-git" data-language="git"><code class="language-git">git  push origin --tag
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="拉取-Tag"><a href="#拉取-Tag" class="headerlink" title="拉取 Tag"></a>拉取 Tag</h3><pre class="line-numbers language-git" data-language="git"><code class="language-git">git  pull origin --tag<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="根据-Tag-回退到之前版本"><a href="#根据-Tag-回退到之前版本" class="headerlink" title="根据 Tag 回退到之前版本"></a>根据 Tag 回退到之前版本</h3><h4 id="查看所有-tag"><a href="#查看所有-tag" class="headerlink" title="查看所有 tag"></a>查看所有 tag</h4><pre class="line-numbers language-git" data-language="git"><code class="language-git">git tag<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h4 id="查看指定-tag-找出打标签的那次提交-commit-id"><a href="#查看指定-tag-找出打标签的那次提交-commit-id" class="headerlink" title="查看指定 tag 找出打标签的那次提交 commit id"></a>查看指定 tag 找出打标签的那次提交 <code>commit id</code></h4><pre class="line-numbers language-git" data-language="git"><code class="language-git">git show tag名称<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h4 id="版本回退，创建分支"><a href="#版本回退，创建分支" class="headerlink" title="版本回退，创建分支"></a>版本回退，创建分支</h4><pre class="line-numbers language-git" data-language="git"><code class="language-git">//版本回退
+
+git reset --hard  提交commit-id
+
+//创建分支并切换到新分支
+
+git checkout -b 分支名称
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>:::tip 注意<br>通过标签回退版本后，需要创建一个新的分支，然后当前主干分支要立即回到原来的位置。在新的分支上修改代码<br>:::</p>
+<h4 id="原分支立即回到原来的提交位置"><a href="#原分支立即回到原来的提交位置" class="headerlink" title="原分支立即回到原来的提交位置"></a>原分支立即回到原来的提交位置</h4><pre class="line-numbers language-git" data-language="git"><code class="language-git">//切换到之前分支
+
+git checkout 之前分支名称
+
+//查看之前分支的原来位置提交id
+
+git reflog
+
+// 主分支回到原来提交位置
+git reset --hard  原来提交commit-id
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>后续，切换分支，在新建分支上修改代码</p>
+
                 
             </div>
             <hr/>
@@ -618,7 +787,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/categories/%E5%85%B3%E4%BA%8Egit%E7%9A%84%E6%93%8D%E4%BD%9C.html">http://example.com/categories/%E5%85%B3%E4%BA%8Egit%E7%9A%84%E6%93%8D%E4%BD%9C.html</a>
+                    <a href="http://example.com/2021/10/10/guan-yu-git-de-cao-zuo/">http://example.com/2021/10/10/guan-yu-git-de-cao-zuo/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -655,7 +824,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/git/">
+                                    <span class="chip bg-color">git</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -1124,7 +1297,7 @@
                 <i class="far fa-dot-circle"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/categories/%E5%85%B3%E4%BA%8Egit%E7%9A%84%E6%93%8D%E4%BD%9C.html">
+                <a href="/2021/10/10/guan-yu-git-de-cao-zuo/">
                     <div class="card-image">
                         
                         
@@ -1145,13 +1318,25 @@
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            ayx
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%85%B3%E4%BA%8Egit%E7%9A%84%E6%93%8D%E4%BD%9C/" class="post-category">
+                                    关于git的操作
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
 
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/git/">
+                        <span class="chip bg-color">git</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -1159,16 +1344,16 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/categories/%E5%85%B3%E4%BA%8Egit%E7%9A%84%E6%93%8D%E4%BD%9C.html">
+                <a href="/2021/10/09/hello-world/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="git操作">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
                         
-                        <span class="card-title">git操作</span>
+                        <span class="card-title">Hello World</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1179,7 +1364,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-10
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-09
                             </span>
                         <span class="publish-author">
                             
@@ -1189,7 +1374,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
