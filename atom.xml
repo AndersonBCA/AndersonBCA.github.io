@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-11-11T06:40:53.695Z</updated>
+  <updated>2021-11-23T07:54:44.822Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>react</title>
+    <link href="http://example.com/2021/11/23/react-xue-xi/"/>
+    <id>http://example.com/2021/11/23/react-xue-xi/</id>
+    <published>2021-11-23T07:53:00.000Z</published>
+    <updated>2021-11-23T07:54:44.822Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;React-入门&quot;&gt;&lt;a href=&quot;#React-入门&quot; class=&quot;headerlink&quot; title=&quot;React 入门&quot;&gt;&lt;/a&gt;React 入门&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;包括 React</summary>
+        
+      
+    
+    
+    
+    <category term="react学习" scheme="http://example.com/categories/react%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="react" scheme="http://example.com/tags/react/"/>
+    
+  </entry>
   
   <entry>
     <title>h-ui</title>
