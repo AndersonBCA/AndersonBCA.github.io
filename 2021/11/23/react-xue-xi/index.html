@@ -29,9 +29,9 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="An's Blog" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 5.4.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="An's Blog" type="application/atom+xml">
 </head>
 
 
@@ -575,7 +575,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    730
+                    729
                 </div>
                 
 
@@ -638,7 +638,7 @@
 <p>预处理器 可以直接写元素标签</p>
 </blockquote>
 <h3 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World"></a>Hello World</h3><p>=======</p>
-<h3 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h3><p>::: details 点击查看代码</p>
+<h3 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h3><p> details 点击查看代码</p>
 <pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
@@ -667,29 +667,32 @@
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>:::</p>
+
+
 <h3 id="创建-DOM-的两种方法"><a href="#创建-DOM-的两种方法" class="headerlink" title="创建 DOM 的两种方法"></a>创建 DOM 的两种方法</h3><h4 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h4><blockquote>
 <p>嵌套元素不方便</p>
 </blockquote>
-<p>::: details 点击查看代码</p>
+<p> details 点击查看代码</p>
 <pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text/babel<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
   <span class="token keyword">const</span> vDom <span class="token operator">=</span> React<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">"h1"</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> id<span class="token operator">:</span> <span class="token string">"title"</span> <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token string">"Hello World"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   ReactDOM<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span>vDom<span class="token punctuation">,</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">".test"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>:::</p>
-<h3 id="JSX"><a href="#JSX" class="headerlink" title="JSX"></a>JSX</h3><p>::: details 点击查看代码</p>
+
+
+<h3 id="JSX"><a href="#JSX" class="headerlink" title="JSX"></a>JSX</h3><p> details 点击查看代码</p>
 <pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text/babel<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
   <span class="token keyword">const</span> vDom <span class="token operator">=</span> <span class="token operator">&lt;</span>h1<span class="token operator">&gt;</span>Hello world<span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">&gt;</span><span class="token punctuation">;</span>
   ReactDOM<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span>vDom<span class="token punctuation">,</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">".test"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>:::</p>
+
+
 <p>多层嵌套元素</p>
 <blockquote>
 <p>方便书写元素，原理还是利用<code>React.createElement</code>创建</p>
 </blockquote>
-<p>::: details 点击查看代码</p>
+<p> details 点击查看代码</p>
 <pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text/babel<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
   <span class="token keyword">const</span> vDom <span class="token operator">=</span> <span class="token punctuation">(</span>
     <span class="token operator">&lt;</span>h1 id<span class="token operator">=</span><span class="token string">"title"</span><span class="token operator">&gt;</span>
@@ -699,7 +702,8 @@
   ReactDOM<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span>vDom<span class="token punctuation">,</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">".test"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>:::</p>
+
+
 <h3 id="虚拟-DOM-与真实-DOM"><a href="#虚拟-DOM-与真实-DOM" class="headerlink" title="虚拟 DOM 与真实 DOM"></a>虚拟 DOM 与真实 DOM</h3><p>查看虚拟 DOM 类型</p>
 <ul>
 <li>虚拟 DOM 本质是一个<code>Object</code>对象</li>
@@ -719,14 +723,15 @@ console<span class="token punctuation">.</span><span class="token function">log<
 console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">typeof</span> vDom<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//object</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>真实 DOM<br>::: tip 注意<br>因为使用 console.log 打印的直接是元素，所以需要需要 debugger 在控制台查看真实 DOM 属性<br>:::</p>
+<p>真实 DOM<br>tip 注意<br>因为使用 console.log 打印的直接是元素，所以需要需要 debugger 在控制台查看真实 DOM 属性</p>
 <pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">//真实dom</span>
 <span class="token keyword">const</span> tDom <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">".test"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment">//因为使用console.log打印的直接是元素，所以需要需要debugger在控制台查看真实DOM属性</span>
 <span class="token keyword">debugger</span><span class="token punctuation">;</span>
 console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>tDom<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>:::</p>
+
+
 
                 
             </div>
